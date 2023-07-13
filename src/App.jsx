@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Count from './containers/Count/countPlus'
+import Count from './containers/Count/countPlus' //引入count的容器组件
 import Person from './containers/Person/person'
 
 export default class App extends Component {

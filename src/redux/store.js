@@ -3,18 +3,12 @@
 */
 
 //引入createStore，专门用于创建redux中最为核心的store对象
-import {createStore, applyMiddleware,combineReducers} from 'redux'
-//引入为count服务的reducer
-import countReducer from './reducers/count'
-//引入为person服务的reducer
-import personReducer from './reducers/person'
+import {createStore, applyMiddleware} from 'redux'
+//引入汇总的reducer
+import allReducer from './reducers/index'
 //引入redux-thunk，用于支持异步action
 import thunk from 'redux-thunk'
 
-//汇总所有的reducer
-const allReducer = combineReducers({
-    count: countReducer,
-    persons: personReducer
-})
+
 //暴露store
 export default createStore(allReducer, applyMiddleware(thunk))
